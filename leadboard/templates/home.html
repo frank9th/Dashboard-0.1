@@ -1,0 +1,50 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %} <br/>
+
+<div class = "table-box">
+	<div class = "caption">
+	<h1> HNG17 Internship Dashbord</h1>
+	<h3> internts details and point board </h3>
+</div>
+ <table>
+    <tr>
+   	<th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email </th>
+      <th>Gender </th>
+      <th>Tracks </th>
+      <th>Language</th>
+      <th>Points</th>
+  </tr>
+  {% for item in member %}
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.first_name}} </td>
+        <td>{{item.last_name}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.gender}}</td>
+        <td>{{item.tracks}}</td>
+        <td>{{item.language}}</td>
+        <td>{{item.points}}</td>
+
+      </tr>
+  {% endfor %}
+
+
+
+
+    <tr>
+     
+    </tr>
+  
+  </table>
+
+
+</div>
+
+
+{% endblock %}
